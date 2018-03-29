@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class ShowDetails extends Component {
-  state = {
 
-  }
   render() {
     const { currentId, employees } = this.props;
     let currentEmployee = employees.filter(e => e.id === currentId);
@@ -12,7 +10,6 @@ class ShowDetails extends Component {
       <div className="list-employees">
         <div className="list-employees-top">
           <h2>Employee details</h2>
-          <p>currentId: {currentId}</p>
         </div>
 
         <ol className='employee-list'>

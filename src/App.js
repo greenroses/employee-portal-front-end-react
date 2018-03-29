@@ -7,49 +7,22 @@ import ShowDetails from './ShowDetails'
 class App extends Component {
   state = {
     currentId: '',
-    employees: [
-      {
-        "id": "1",
-        "name": "Ryan Florence",
-        "email": "ryan@reacttraining.com",
-        "salary": 90000,
-        "hiredate": "20161201"
-      },
-      {
-        "id": "2",
-        "name": "Michael Jackson",
-        "email": "michael@reacttraining.com",
-        "salary": 70000,
-        "hiredate": "20171001"
-      },
-      {
-        "id": "3",
-        "name": "Tyler McGinnis",
-        "email": "tyler@reacttraining.com",
-        "salary": 80000,
-        "hiredate": "20171201"
-      },
-      {
-        "id": "4",
-        "name": "Gayle Mcdowell",
-        "email": "gayle@gmail.com",
-        "salary": 100000,
-        "hiredate": "20151201"
-      },
-      {
-        "id": "5",
-        "name": "Alice Hanna",
-        "email": "alice@gmail.com",
-        "salary": 60000,
-        "hiredate": "20160520"
-      }
-    ]
+    employees: []
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:8080/employee-portal-api/employees", { headers: {'Accept': 'application/json'}})
+    .then((resp) => {
+      resp.json().then((data) => {
+        console.log(data);
+        this.setState({employees: data});
+      })
+    })
   }
 
   setCurrentId = (id) => {
     this.setState({ currentId: id});
   }
-
 
   render() {
     return (
