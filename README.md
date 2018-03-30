@@ -3,7 +3,7 @@ An application that allows users to view and perform sorting and filtering of em
 
 The front end is created with React JS.
 
-The server files are in another folder name as Employee-portal-api. Make sure you have the server running before running this package. 
+The API server files are in another folder name as Employee-portal-api. Make sure you have the server running before running this package. 
 
 ## Installation
 Install packages: 'npm install'
