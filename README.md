@@ -3,11 +3,12 @@ An application that allows users to view and perform sorting and filtering of em
 
 The front end is created with React JS.
 
-The API server files are in another folder name as Employee-portal-api. Make sure you have the server running before running this package. 
+The API server files are in another folder name as `employee-portal-api-server`. Make sure you have the server running before running this package. 
 
 ## Installation
-Install packages: 'npm install'
-Launch webpage: 'npm start'
+In command line: `cd employee-portal-front-end-react` and run the following commands to install packages and launch webpage.
+Install packages: `npm install`
+Launch webpage: `npm start`
 Unless modified, the webpage will use port 3000 (http://localhost:3000/)
 
 ## Functionality
